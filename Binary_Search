@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+ void main()
+  {
+    int arr[20],n,sear,mid,fir,las,i;
+    clrscr();
+    printf("Enter the limit");
+    scanf("%d,&n);
+    printf("Enter the elements in ascending order");
+    for(i=0;i<n;i++)
+     {
+      scanf("%d",&arr[i]);
+     }
+    printf("Enter the element to be searched");
+    scanf("%d",&sear);
+    fir=0;
+    las=n-1;
+    while(fir<=las)
+     {
+      mid=(fir+las)/2;
+      if(sear==arr[mid])
+       {
+        printf("The location is %d",mid+1);
+        break;
+       }
+      else if(sear<arr[mid])
+        {
+         las=mid-1;
+        }
+      else
+        {
+         fir=mid+1;
+        }
+      }
+     getch();
+   }
+  
